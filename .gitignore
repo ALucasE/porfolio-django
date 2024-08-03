@@ -3,7 +3,6 @@
 *.pot
 *.pyc
 __pycache__
-media
 
 # Python # 
 *.py[cod] 
@@ -30,3 +29,5 @@ wheels/
 *.spec 
 
 .env
+
+.vscode

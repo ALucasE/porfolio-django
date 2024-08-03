@@ -14,7 +14,7 @@ class Curso(models.Model):
 
 class Habilidades(models.Model):
     titulo = models.CharField(max_length=50, unique=True, verbose_name='Titulo')
-    imagen = models.ImageField(upload_to='proyecto',verbose_name='Imagen')
+    imagen = models.ImageField(upload_to='about',verbose_name='Imagen')
     fecha_creacion = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creación')
     fecha_modificacion = models.DateTimeField(auto_now=True, verbose_name='Fecha de modificación')
 

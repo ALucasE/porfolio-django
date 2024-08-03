@@ -10,139 +10,51 @@
 <!-- ARCHIVOS ESTATICOS EXTRA -->
 {% block extra_css %}{% endblock extra_css %}
 
-
 <!-- CONTENIDO PRINCIPAL -->
 {% block contenido_principal %}
-
 <div class="row d-flex">
     <div class="col-4 offset-md-auto">
         <img class="img-fluid img-thumbnail img-circle img-perfil " src="{% static 'core/img/foto-perfil.png' %}" alt="">
     </div>
     <div class="col-6">
-        <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit temporibus distinctio expedita enim, libero pariatur aliquam ullam molestiae debitis eos nobis at ipsa eveniet cum officiis fuga incidunt eius ex?</h4>
+        <h4>Apasionado técnico informático con sólida experiencia en la resolución de problemas en entornos de TI. Mi trayectoria se ha centrado en ofrecer soluciones efectivas en hardware y software para optimizar el rendimiento y la eficiencia. Al mismo tiempo, mi dedicación como estudiante de programación me impulsa a explorar y dominar lenguajes y conceptos para contribuir al desarrollo de soluciones tecnológicas innovadoras. Mi enfoque versátil y continuo en la informática abarca desde la resolución de problemas técnicos hasta el estudio profundo de la lógica y el desarrollo de aplicaciones, buscando fusionar conocimientos para impulsar la excelencia en el campo de la tecnología.</h4>
     </div>
 </div> 
 
 <div class="row d-flex pt-5">
     <div class="col-12">
         <h2 class="fw-bold">Formación Académica</h2>
-        <h3>Formación Nº 1</h3>
-        <p><strong>Título obtenido:</strong> Lorem ipsum dolor</p>
-        <p><strong>Descripción:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio atque praesentium fugiat doloremque, repellendus minus nisi enim nam voluptas velit beatae assumenda! Necessitatibus, eum vitae voluptates sunt quasi optio.</p>
+        <!-- CONTENIDO CURSOS -->
+        
+            {% for curso in cursos %}
+                <h3>{{ curso.institucion }}</h3>
+                <p><strong>Título obtenido:</strong> {{ curso.titulo }}</p>
+                <p><strong>Descripción:</strong> {{ curso.descipcion }}</p>
+                <hr>
+            {% empty %}
 
-        <hr>
+                <h3>Aun no se cargaron las formaciones</h3>
 
-        <h3>Formación Nº 2</h3>
-        <p><strong>Título obtenido:</strong> Lorem ipsum dolor</p>
-        <p><strong>Descripción:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio atque praesentium fugiat doloremque, repellendus minus nisi enim nam voluptas velit beatae assumenda! Necessitatibus, eum vitae voluptates sunt quasi optio.</p>
-        <hr>
-        <h3>Formación Nº 3</h3>
-        <p><strong>Título obtenido:</strong> Lorem ipsum dolor</p>
-        <p><strong>Descripción:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis distinctio atque praesentium fugiat doloremque, repellendus minus nisi enim nam voluptas velit beatae assumenda! Necessitatibus, eum vitae voluptates sunt quasi optio.</p>
-
-        <hr>
+                <hr>
+            {% endfor %}
         <h2 class="fw-bold">Conocimientos</h2>
+            
         <section class="skills" id="skills">
             <div class="skills__container" id="skills">
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/html5-svgrepo-com.svg' %}" alt="html5">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">HTML5</p>
-                    </div>
-                </div>
 
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/javascript-svgrepo-com.svg' %}" alt="JS">
+                {% for habilidad in habilidades %}
+                    <div class="card__skills">
+                        <div class="skill__thumbnail">
+                            <img class="skill__logo" src="{{ habilidad.imagen.url }}" alt="{{ habilidad.titulo }}">
+                        </div>
+                        <div class="skill__texto">
+                            <p class="skill__titulo">{{ habilidad.titulo }}</p>
+                        </div>
                     </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">Javascript</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/css3-svgrepo-com.svg' %}" alt="CSS">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">CSS3</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/bootstrap-svgrepo-com.svg' %}" alt="Bootstrap">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">Bootstrap</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/icons8-react.svg' %}" alt="React">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">React</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/nodejs-icon-svgrepo-com.svg' %}" alt="NodeJS">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">NodeJS</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/python-icons8.svg' %}" alt="Python">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">Python</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/django-icons8.svg' %}" alt="Django">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">Django</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/mysql-svgrepo-com.svg' %}" alt="MySQL">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">MySQL</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/postgresql-logo-svgrepo-com.svg' %}" alt="PostgreSQL">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">PostgreSQL</p>
-                    </div>
-                </div>
-
-                <div class="card__skills">
-                    <div class="skill__thumbnail">
-                        <img class="skill__logo" src="{% static 'core/img/skills/icons8-mongodb.svg' %}" alt="MongoDB">
-                    </div>
-                    <div class="skill__texto">
-                        <p class="skill__titulo">MongoDB</p>
-                    </div>
-                </div>
-
+                    {% empty %}
+                        <h3>Aun no se cargaron las habilidades</h3>
+                        <hr>
+                {% endfor %}
             </div>
         </section>
     </section>

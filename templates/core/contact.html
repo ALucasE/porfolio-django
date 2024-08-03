@@ -1,0 +1,29 @@
+<!-- HERENCIA DE BASE -->
+{% extends "core/base.html" %}
+
+<!-- CARGA LOS ESTATICOS -->
+{% load static %}
+
+<!-- TITULO DINAMICO -->
+{% block titulo %} CONTACTO {% endblock titulo %}
+
+<!-- ARCHIVOS ESTATICOS EXTRA -->
+{% block extra_css %}{% endblock extra_css %}
+
+
+<!-- CONTENIDO PRINCIPAL -->
+{% block contenido_principal %}
+
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
+      <br>
+      <p><b>Teléfono:</b> 387 563 8609</p>
+      <p><b>Honorarios:</b> A convenir</p>
+    </div>
+</div>
+
+{% endblock contenido_principal %}
+
+<!-- ARCHIVOS JS EXTRA -->
+{% block extra_js %}{% endblock extra_js %}

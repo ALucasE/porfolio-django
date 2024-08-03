@@ -1,4 +1,4 @@
-# Portafolio Personal Dinámico
+![image](https://github.com/user-attachments/assets/cd2a98c0-2536-4757-b17b-63c33a4cd1fd)# Portafolio Personal Dinámico
 
 !Portafolio
 
@@ -52,10 +52,13 @@ Este es un portafolio personal dinámico desarrollado con **Django 4.2** y **Boo
 
 ## Capturas de Pantalla
 
-!Inicio
-!Acerca de
-!Portafolio
-!Contacto
+![Inicio](https://github.com/user-attachments/assets/f4d6c4fc-620c-4639-bfa1-b7ccbd3bb49e)
+
+![Acerca de](https://github.com/user-attachments/assets/28577527-77d5-4841-8056-c3808262fcfc)
+
+![Portafolio](https://github.com/user-attachments/assets/67526f60-de87-477a-9181-af51ad5bb920)
+
+![Contacto](https://github.com/user-attachments/assets/f99c2a63-6e12-47e9-884f-4ead177af323)
 
 ## Contribuciones
 
